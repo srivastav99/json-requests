@@ -1,0 +1,12 @@
+@BeforeClass
+public static void runBeforeAllTestMethods() {
+    createPersonUrl = "http://localhost:8082/spring-rest/createPerson";
+    updatePersonUrl = "http://localhost:8082/spring-rest/updatePerson";
+
+    restTemplate = new RestTemplate();
+    headers = new HttpHeaders();
+    headers.setContentType(MediaType.APPLICATION_JSON);
+    personJsonObject = new JSONObject();
+    personJsonObject.put("id", 1);
+    personJsonObject.put("name", "John");
+}
